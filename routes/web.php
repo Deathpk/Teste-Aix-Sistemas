@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
+});
+Auth::routes();
+
+Route::prefix('admin')->group(function (){
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/student/signup', 'studentController@showSignUpForm')->name('studentSignup');
+    Route::post('/student/signup','studentController@signUpStudent')->name('doSignStudent');
+    Route::get('/student/enroled', 'studentController@showAllStudents')->name('showAllStudents');
+    Route::post('/student/{id}/edit', 'studentController@editStudent')->name('editStudent');
+    Route::put('student/{id}/update','studentController@updateStudent')->name('updateStudent');
 });
 
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+

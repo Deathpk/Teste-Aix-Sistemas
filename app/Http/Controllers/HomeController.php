@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\courseModel;
+use App\Models\studentModel;
 class HomeController extends Controller
 {
     /**
@@ -25,7 +26,12 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::check()){
-            return view('dashboard');
+            $students = studentModel::getAllStudents();
+            $studentsQuantity = count($students);
+            $courses = courseModel::getCourses();
+            $coursesQuantity = count($courses);
+            // dd($studentsQuantity);
+            return view('dashboard',['students'=>$studentsQuantity,'courses'=>$coursesQuantity]);
         }
         else{
             return view('login');

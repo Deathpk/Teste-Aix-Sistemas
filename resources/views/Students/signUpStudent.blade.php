@@ -12,6 +12,22 @@
             <label for="matricula">Matricula</label>
             <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Insira a matricula">
         </div>
+
+        <div class="form-group">
+            <label for="matricula">Curso</label>
+            <select class="form-control" id="curso" name="curso">
+                @foreach($courses as $obj)
+                 <option  value="{{$obj->codigo}}" selected>{{$obj->nome}}</option>
+                @endforeach
+                <option  value="null" selected>Escolha um curso</option>
+            </select>    
+        </div>
+
+        <div class="form-group">
+            <label for="turma">Turma</label>
+            <input type="text" class="form-control" id="turma" name="turma" placeholder="Insira a turma">
+        </div>
+
         <div class="form-group">
             <label for="cep">CEP</label>
             <input type="number" class="form-control" id="cep" name="cep" placeholder="Insira o CEP">
@@ -29,7 +45,7 @@
             <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Insira a cidade">
         </div>
         <div class="form-group">
-            <label for="numero">Numero</label>
+            <label for="numero">Número</label>
             <input type="number" class="form-control" id="numero" name="numero" placeholder="Insira o numero">
         </div>
         <div class="form-group">

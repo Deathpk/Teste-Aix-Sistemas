@@ -32,16 +32,15 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item ">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="cursos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  Cursos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="cursos">
-                                <a class="dropdown-item" href="#">Cadastrar Curso</a>
-                                    <a class="dropdown-item" href="#">Todos Cursos</a>
-                                    <a class="dropdown-item" href="#">Importar Cursos</a>
+                                    <a class="dropdown-item" href="{{route('createCourse')}}">Cadastrar Curso</a>
+                                    <a class="dropdown-item" href="{{route('showAllCourses')}}">Todos Cursos</a>
                                 </div>
                             </li>
                             
@@ -50,8 +49,7 @@
                                     Alunos
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="alunos">
-                                    <a class="dropdown-item" href="#">Buscar aluno</a>
-                                <a class="dropdown-item" href="{{route('showAllStudents')}}">Todos Alunos</a>
+                                    <a class="dropdown-item" href="{{route('showAllStudents')}}">Todos Alunos</a>
                                     <a class="dropdown-item" href="{{route('studentSignup')}}">Cadastrar aluno</a>
                                 </div>
                             </li>

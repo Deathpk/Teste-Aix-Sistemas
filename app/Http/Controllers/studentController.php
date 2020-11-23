@@ -56,7 +56,6 @@ class studentController extends Controller
     public function updateStudent($id, Request $request)
     {
         $request->merge(['id'=>$id]);
-        // dd($request);
         $updateStudent = studentModel::updateStudent($request);
         if($updateStudent == true){
             return $this->showAllStudents();

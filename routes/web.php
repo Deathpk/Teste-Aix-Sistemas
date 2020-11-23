@@ -24,7 +24,6 @@ Route::prefix('admin')->group(function (){
     Route::get('student/signup', function(){
         if (Auth::check()){
             $courses = courseModel::getCourses();
-            // dd($courses);
             return view('Students.signUpStudent',['courses'=>$courses]);
         }
         else{

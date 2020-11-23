@@ -30,7 +30,6 @@ class HomeController extends Controller
             $studentsQuantity = count($students);
             $courses = courseModel::getCourses();
             $coursesQuantity = count($courses);
-            // dd($studentsQuantity);
             return view('dashboard',['students'=>$studentsQuantity,'courses'=>$coursesQuantity]);
         }
         else{

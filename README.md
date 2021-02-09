@@ -11,6 +11,3 @@
 3. Faça o login com email e senha do usuário criado.
 4. No Dashboard , clique em **Cursos** e selecione a opção **Cadastrar Curso** , ou se preferir importar via XML , clique na opção **Todos Cursos** e importe o arquivo.
 5. Depois de ter cadastrado os Cursos , é hora de cadastrar os Alunos , para isso clique na opção **Cadastrar Alunos do navbar**. Para edição , e exclusão de alunos , basta acessar a opção **Todos Alunos**.
-
-# Observação
-*Infelizmente , por conta da rotina nessa semana que foi apertada , não consegui implementar algumas features , como upload de imagem do aluno , e consumo de API de endereço , visto que não trabalhei tanto com JS. O front-end também está bem básico , porque durante toda minha jornada , sempre fiquei mais focado no backend , e agora que estou aprendendo as tecnologias front , como vuejs. Desde Já , obrigado pela atenção! :)*
